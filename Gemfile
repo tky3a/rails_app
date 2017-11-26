@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#sprockets
+gem 'sprockets', '~> 3.7.1'
 #bootstrap3
 gem 'bootstrap-sass'
 #jquery

@@ -1,0 +1,13 @@
+<!--bootstrapを利用する場合は、クラス名で表示が変ってくるためクラス名が重要-->
+<header class = "navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "Rails App", '#', id: "logo" %><!--ヘッダーにリンク付きロゴを作成-->
+    <nav>
+      <ul class = "nav navbar-nav navbar-right">
+        <li><%= link_to "Home", '#' %></li>
+        <li><%= link_to "Help", '#' %></li>
+        <li><%= link_to "Sign in", '#' %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
