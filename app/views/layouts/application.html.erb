@@ -6,9 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--古いバーじょんIEでも表示できるように設定-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
 
-  <body>
-    <%= yield %>
+  <body><!--bootstrapを利用する場合は、クラス名で表示が変ってくるためクラス名が重要-->
+    <header class = "navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Rails App", '#', id: "logo" %><!--ヘッダーにリンク付きロゴを作成-->
+        <nav>
+          <ul class = "nav navbar-nav navbar-right">
+            <li><%= link_to "Home", '#' %></li>
+            <li><%= link_to "Help", '#' %></li>
+            <li><%= link_to "Sign in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+          <%= yield %>
+    </div>
   </body>
 </html>
